@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@keyframes floatUpDown {
+  0%,100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(360deg);
+  }
+}
+
+.icon-float {
+  animation: floatUpDown 10s ease-in-out infinite;
+}
+
+@keyframes borderGradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient-border {
+  background: linear-gradient(270deg, #0E2148, #483AA0, #E3D095);
+  background-size: 200% 200%;
+  animation: borderGradientMove 2s ease infinite;
+  padding: 2px; /* this creates the visible border */
+  border-radius: 1.5rem; /* match Tailwind's rounded-3xl */
+}
+
+#cursor-bg::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0,255,255,0.15), transparent 60%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: transform 0.05s ease-out;
+}
+@theme {
+  --color-bg: 255 255 255;
+  --color-box: 255 255 255;
+  --box-border: 229 231 235;
+  --box-sd: 226 232 240 / 0.5;
+  --heading-1: 23 37 84;
+  --heading-2: 31 41 55;
+  --heading-3: 55 65 81;
+}
+
+html.dark{
+  --color-bg: 3 7 18;
+  --color-box: 17 24 39;
+  --box-border: 243 244 246 / 0.1;
+  --box-sd: transparent;
+  --heading-1: 255 255 255;
+  --heading-2: 243 244 246;
+  --heading-3: 209 213 219;
+}
+
+@layer utilities {
+
+  .bg-body {
+    background-color: rgb(var(--color-bg));
+  }
+
+  .bg-box-bg {
+    background-color: rgb(var(--color-box));
+  }
+
+  .text-heading-1 {
+    color: rgb(var(--heading-1));
+  }
+  
+  .text-heading-2 {
+    color: rgb(var(--heading-2));
+  }
+  
+  .text-heading-3 {
+    color: rgb(var(--heading-3));
+  }
+  
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
