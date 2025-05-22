@@ -30,24 +30,8 @@ export const AboutUs = () => {
 
 
           <div className="pt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl">
-            <Info title="Mission" description="To build high-quality software solutions that empower users, optimize performance, and solve real-world problems.">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    className="w-5 h-5 sm:w-6 sm:h-6"
-                >
-                    <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 6v6l4 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                </svg>
-                </Info>
-
-                <Info title="Vision" description="To become a trusted tech partner recognized for innovation, efficiency, and transforming ideas into impactful digital products.">
+            
+              <Info title="Vision" description="To become a trusted tech partner recognized for innovation, efficiency, and transforming ideas into impactful digital products.">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -68,6 +52,23 @@ export const AboutUs = () => {
                     />
                 </svg>
             </Info>
+            <Info title="Mission" description="To build high-quality software solutions that empower users, optimize performance, and solve real-world problems.">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="w-5 h-5 sm:w-6 sm:h-6"
+                >
+                    <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 6v6l4 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                </svg>
+              </Info>
+
           </div>
         </div>
       </Container>

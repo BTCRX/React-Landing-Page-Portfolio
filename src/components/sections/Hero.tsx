@@ -26,11 +26,10 @@ export const Hero = () => {
                     </h1>
                     
                     <Paragraphs className="mt-8 paragraph-animation">
-                        I'm a software engineer with experience in web, mobile android, and desktop development. I work with React, 
-                        TailwindCSS, Laravel, Node.js, Flutter, and SQL to build practical, user-focused applications. 
-                        I try to write code that's as clean and maintainable as I can, and I'm always learning how to improve. 
-                        Whether it's creating a responsive UI, setting up backend services, or building cross-platform apps, 
-                        I enjoy solving problems and making things work reliably.
+                        We are a team of software engineers with experience in web, mobile Android, and desktop development. 
+                        We work with React, TailwindCSS, Laravel, Node.js, Flutter, and SQL to build practical, user-focused applications. 
+                        We focus on writing clean, maintainable code and getting things done efficiently. 
+                        Whether it’s designing intuitive UI/UX, setting up backend services, or building cross-platform apps, we enjoy solving real-world problems and making things work reliably.
                     </Paragraphs>
 
                 </div>

@@ -23,7 +23,13 @@ export const NeuralBackground = () => {
     canvas.width = width;
     canvas.height = height;
 
-    const numPoints = 100;
+    // Set number of points based on screen width
+    let numPoints = 100;
+    if (width < 640) {
+        numPoints = 25;
+    } else if (width < 1024) {
+        numPoints = 50;
+    }
     points.current = [];
 
     for (let i = 0; i < numPoints; i++) {

@@ -14,8 +14,8 @@ export const Services = () => {
         <div className="title-animation text-center max-w-3xl mx-auto space-y-4">
           <Title> Our Services</Title>
           <Paragraphs >
-            I build web, mobile, and desktop applications using tools like React, TailwindCSS, Laravel, Node.js, Flutter, and SQL. 
-            From frontend to backend, I focus on creating clean, reliable, and user-centered solutions.
+            We build web, mobile, and desktop applications using tools like React, TailwindCSS, Laravel, Node.js, Flutter, and SQL. 
+            From frontend to backend, our focus is on delivering clean, reliable, and user-centered solutions through effective UI/UX design and solid development practices.
           </Paragraphs>
         </div>
 
