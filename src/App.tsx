@@ -10,6 +10,14 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLayoutEffect } from "react";
 import { NeuralBackground } from "./components/NeuralBackground";
 
+//page and routing
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ProjectsPage from "./components/pages/ProjectsPage";
+import ContactPage from "./components/pages/ContactPage";
+import { Footer } from "./components/elements/Footer";
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -44,16 +52,45 @@ function App() {
   }, []);
   
   return (
-    <div className="relative overflow-hidden">
-      <NeuralBackground />
-      <Layout title="D-Project Portfolio">
-        <Hero />
-        <Services />
-        <AboutUs />
-        <Pricing />
-        <CTA />
-      </Layout>
-    </div>
+    <Router>
+      <div className="relative overflow-hidden">
+        <NeuralBackground />
+        <Routes>
+          {/* Landing Page Route */}
+          <Route
+            path="/"
+            element={
+              <Layout title="D-Project Portfolio">
+                <Hero />
+                <Services />
+                <AboutUs />
+                {/* <Pricing /> */}
+                <CTA />
+                <Footer/>
+              </Layout>
+            }
+          />
+
+          {/* Halaman Tambahan */}
+          <Route
+            path="/projects"
+            element={
+              <Layout title="Projects">
+                <ProjectsPage />
+              </Layout>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <Layout title="Contact">
+                <ContactPage />
+              </Layout>
+            }
+          />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

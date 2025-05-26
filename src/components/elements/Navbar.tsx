@@ -3,12 +3,14 @@ import logo from '../../assets/icon.png';
 import { NavItem } from "../shared/NavItem";
 import { BtnLink } from "../shared/BtnLink";
 import { useThemeStore } from "../../store/ThemeStore";
+import { Link } from 'react-router-dom';
+
 
 export const navItems = [
   { href: "#", text: "Home" },
   { href: "#services", text: "Services" },
   { href: "#about-us", text: "About Us" },
-  { href: "#pricing", text: "Pricing" },
+//   { href: "#pricing", text: "Pricing" },
 ];
 
 export const Navbar = () => {
@@ -33,9 +35,11 @@ export const Navbar = () => {
                                 <NavItem href={item.href} text={item.text} key={key} />
                             ))}
                         </ul>
-                        <div className="lg:min-w-max flex items-center sm:w-max w-full pb-6 lg:pb-0 border-b border-box-border lg:border-0 px-6 lg:px-0">
-                            <BtnLink text="Get Contact" href="#cta" className="" />
-                        </div>
+                        <Link to="/contact">
+                            <div className="lg:min-w-max flex items-center sm:w-max w-full pb-6 lg:pb-0 border-b border-box-border lg:border-0 px-6 lg:px-0">
+                                <BtnLink text="Contact Us" href="#cta" className="" />
+                            </div>
+                        </Link>
                     </div>
                     <div className="min-w-max flex items-center gap-x-3">
                         <button onClick={toggleTheme} className="outline-hidden flex relative text-heading-2 rounded-full p-2 lg:p-3 cursor-pointer bg-[#685FB1]/50">
