@@ -1,15 +1,20 @@
+import { Link } from 'react-router-dom';
 
-interface NavItemProps { 
-    href:string;
-    text:string;
+type NavItemType = 'section' | 'link';
+
+interface NavItemProps {
+    href: string;
+    text: string;
+    type: NavItemType;
 }
 
-export const NavItem = ({href , text = ""} : NavItemProps) => {
-    return (
-        <li>
-            <a href={href} className="duration-300 font-medium ease-liner hover:text-primary py-3">
-                {text}
-            </a>
-        </li>
-    );
+export const NavItem = ({ href, text, type }: NavItemProps) => {
+    const commonClass =
+        'duration-300 font-medium ease-linear hover:text-primary py-3';
+
+    if (type === 'link') {
+        return <Link to={href} className={commonClass}>{text}</Link>;
+    }
+
+    return <a href={href} className={commonClass}>{text}</a>;
 };
