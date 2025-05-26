@@ -8,9 +8,9 @@ export const AboutUs = () => {
   return (
     <section id="about-us">
       {" "}
-      <Container className="flex flex-col md:flex-row gap-10 lg:gap-12 items-center">
+      <Container className="flex flex-col md:flex-row gap-10 lg:gap-10 items-center">
         <div className="w-full md:w-5/12 lg:w-1/2">
-          <div className="w-full h-80 sm:h-96 relative">
+          <div className="w-full h-full sm:h-96 relative">
             <img
               src={ManImage}
               className="w-full h-full object-cover rounded-3xl shadow-lg relative z-10"

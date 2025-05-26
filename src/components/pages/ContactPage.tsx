@@ -8,46 +8,25 @@ const ContactPage: React.FC = () => {
   };
 
   return (
-    <div className="px-6 py-12 max-w-xl mx-auto my-40 bg-box-bg">
-      <h1 className="flex flex-col font-bold mb-6 title-animation text-heading-1">Contact Us</h1>
-      <p className="text-lg paragraph-animation mb-8 text-heading-2">
-        Got a question or proposal? We'd love to hear from you!
-      </p>
+    <div className="min-h-screen flex items-center justify-center">
+        <div className="w-full max-w-xl bg-box-bg px-6 py-12">
+            <h1 className="font-bold mb-6 text-heading-1">Contact Us</h1>
+            <p className="text-lg mb-8 text-heading-2">
+                Got a question or proposal? We'd love to hear from you!
+            </p>
 
-      <form onSubmit={handleSubmit} className="space-y-4 text-heading-3">
-        <div>
-          <label className="block text-sm font-medium">Name</label>
-          <input
-            type="text"
-            className="mt-1 block h-10 w-full rounded-xl border-gray-300 shadow-sm focus:ring focus:ring-indigo-300"
-            required
-          />
+            <form onSubmit={handleSubmit} className="space-y-4 text-heading-3">
+                <div className="flex flex-wrap -mx-3 mb-4 gap-y-12">
+                    <input type="text" className="mt-1 p-3 block w-full border rounded-xl border-gray-300 shadow-sm focus:ring focus:ring-indigo-300" placeholder="Name" required />
+                    <input type="email" className="mt-1 p-3 block w-full border rounded-xl border-gray-300 shadow-sm focus:ring focus:ring-indigo-300" placeholder="Email" required />
+                    <textarea className="mt-1 p-3 block w-full border rounded-xl border-gray-300 shadow-sm focus:ring focus:ring-indigo-300" placeholder="Message" required/>
+                    <button type="submit" className="bg-[#685FB1] text-white py-2 px-6 rounded-xl hover:bg-[#685FB1]/70 transition"> Send Message</button>
+                </div>
+            </form>
         </div>
-        <div>
-          <label className="block text-sm font-medium">Email</label>
-          <input
-            type="email"
-            className="mt-1 block h-10 w-full rounded-xl border-gray-300 shadow-sm focus:ring focus:ring-indigo-300"
-            required
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium">Message</label>
-          <textarea
-            rows={4}
-            className="mt-1 block h-20 w-full rounded-xl border-white shadow-sm focus:ring focus:ring-indigo-300"
-            required
-          />
-        </div>
-        <button
-          type="submit"
-          className="bg-indigo-600 text-white py-2 px-6 rounded-xl hover:bg-indigo-700 transition"
-        >
-          Send Message
-        </button>
-      </form>
     </div>
-  );
+    );
+
 };
 
 export default ContactPage;
