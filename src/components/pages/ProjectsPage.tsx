@@ -20,7 +20,7 @@ const projects: Project[] = [
 
 ];
 
-const Projects: React.FC = () => {
+const ProjectsPage: React.FC = () => {
   return (
     <div className="min-h-screen px-6 py-50">
       <div className="max-w-5xl mx-auto">
@@ -60,4 +60,4 @@ const Projects: React.FC = () => {
 
 
 
-export default Projects;
+export default ProjectsPage;
