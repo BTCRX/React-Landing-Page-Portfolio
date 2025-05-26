@@ -1,5 +1,5 @@
 import { Container } from "../shared/Container";
-import logo from '../../assets/icon.png';
+import logo from '../../assets/logo.png';
 import { NavItem } from "../shared/NavItem";
 import { BtnLink } from "../shared/BtnLink";
 import { useThemeStore } from "../../store/ThemeStore";
@@ -11,6 +11,7 @@ export const navItems = [
   { href: "/#services", text: "Services" },
   { href: "/#about-us", text: "About Us" },
 //   { href: "#pricing", text: "Pricing" },
+  { href: "/projects", text: "Projects" },
 ];
 
 export const Navbar = () => {
@@ -22,10 +23,7 @@ export const Navbar = () => {
                     { /* Logo  */}
                     <div className="min-w-max inline-flex relative">
                         <a href="/" className="relative flex items-center gap-3">
-                            <img src={logo} alt="Portfolio Website" className="w-10 h-10 object-cover"/>
-                            <div className="inline-flex text-lg font-semibold text-heading-1">
-                                D-Project
-                            </div>
+                            <img src={logo} alt="Portfolio Website" className="w-40 h-30 object-cover"/>
                         </a>
                     </div>
     

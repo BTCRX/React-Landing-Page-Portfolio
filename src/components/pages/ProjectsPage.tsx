@@ -1,31 +1,58 @@
 import React from "react";
 
-const ProjectsPage: React.FC = () => {
-  return (
-    <div className="px-6 py-12 max-w-5xl mx-auto">
-      <h1 className="text-4xl font-bold mb-6 title-animation">Our Projects</h1>
-      <p className="text-lg paragraph-animation mb-8">
-        Here are some of our featured projects that demonstrate our capabilities
-        in design, development, and innovation.
-      </p>
+type Project = {
+  title: string;
+  description: string;
+  link?: string;
+};
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {[
-          { title: "Project A", desc: "A mobile app built for real-time collaboration." },
-          { title: "Project B", desc: "Web platform for e-commerce integration." },
-          { title: "Project C", desc: "AI-driven dashboard for data analytics." },
-        ].map((project, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-2xl shadow-md p-6"
-          >
-            <h2 className="text-xl font-semibold mb-2">{project.title}</h2>
-            <p className="text-sm text-gray-700">{project.desc}</p>
-          </div>
-        ))}
+const projects: Project[] = [
+  {
+    title: "Portfolio Website",
+    description: "A personal website to showcase my skills and projects.",
+    link: "https://react-landing-page-portfolio-sable.vercel.app/",
+  },
+
+];
+
+const Projects: React.FC = () => {
+  return (
+    <div className="min-h-screen px-6 py-50">
+      <div className="max-w-5xl mx-auto">
+        <h1 className="text-4xl font-bold mb-6 text-center text-heading-1">Projects</h1>
+        <p className="text-lg text-center text-heading-2 mb-12">
+          Explore some of the projects I've built.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project, index) => (
+            <div key={index} className="animated-gradient-border rounded-3xl">
+              <div className="bg-box-bg border border-box-border rounded-[1.375rem] p-6 shadow-md h-[250px] flex flex-col justify-between">
+                <div>
+                  <h2 className="text-xl font-semibold mb-2 text-heading-2">
+                    {project.title}
+                  </h2>
+                  <p className="text-heading-3 mb-4">{project.description}</p>
+                </div>
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-indigo-700 hover:underline text-sm mt-auto"
+                  >
+                    View Project →
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
-export default ProjectsPage;
+
+
+export default Projects;

@@ -1,6 +1,6 @@
 import { Container } from "../shared/Container";
 import { Paragraphs } from "../shared/Paragraphs";
-import logo from '../../assets/icon.png';
+import logo from '../../assets/logo.png';
 import logo2 from '../../assets/icon_2.png';
 import logo3 from '../../assets/icon_3.png';
 
@@ -11,7 +11,6 @@ export const Hero = () => {
             
             <Container className="flex flex-col lg:flex-row gap-10 lg:gap-12">
                 <div className="absolute w-full lg:w-1/2 inset-y-0 lg:right-0">
-                
                 </div>
                 {/* Floating Icon di atas konten
                 <img
@@ -41,7 +40,6 @@ export const Hero = () => {
                         <img src={logo} alt="Portfolio Website" className="w-12 h-12 object-cover"/>
                         <img src={logo2} alt="Portfolio Website" className="w-12 h-12 object-cover"/>
                         <img src={logo3} alt="Portfolio Website" className="w-20 h-12 object-cover"/>
-                        
                     </div>
                 </div>
             </Container>
