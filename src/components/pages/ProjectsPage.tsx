@@ -12,6 +12,11 @@ const projects: Project[] = [
     description: "A personal website to showcase my skills and projects.",
     link: "https://react-landing-page-portfolio-sable.vercel.app/",
   },
+  {
+    title: "Portfolio Website",
+    description: "A personal website to showcase my skills and projects.",
+    link: "https://react-landing-page-portfolio-sable.vercel.app/",
+  },
 
 ];
 
