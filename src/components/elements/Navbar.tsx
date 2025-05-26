@@ -11,7 +11,7 @@ export const navItems = [
   { href: "/#services", text: "Services" },
   { href: "/#about-us", text: "About Us" },
 //   { href: "#pricing", text: "Pricing" },
-  { href: "/projects", text: "Projects" },
+//   { href: "/projects", text: "Projects" },
 ];
 
 export const Navbar = () => {
@@ -35,6 +35,12 @@ export const Navbar = () => {
                                 </li>
                             ))}
                             </ul>
+                            
+                        <Link to="/projects">
+                            <div className="lg:min-w-max flex items-center sm:w-max w-full pb-6 lg:pb-0 border-b border-box-border lg:border-0 px-6 lg:px-0">
+                                <BtnLink text="Projects" href="#cta" className="" />
+                            </div>
+                        </Link>
                         <Link to="/contact">
                             <div className="lg:min-w-max flex items-center sm:w-max w-full pb-6 lg:pb-0 border-b border-box-border lg:border-0 px-6 lg:px-0">
                                 <BtnLink text="Contact Us" href="#cta" className="" />
