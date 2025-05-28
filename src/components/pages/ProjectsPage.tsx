@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 type Project = {
   title: string;
@@ -10,14 +11,8 @@ const projects: Project[] = [
   {
     title: "Portfolio Website",
     description: "A personal website to showcase my skills and projects.",
-    link: "https://react-landing-page-portfolio-sable.vercel.app/",
+    link: "/view-project",
   },
-  {
-    title: "Portfolio Website",
-    description: "A personal website to showcase my skills and projects.",
-    link: "https://react-landing-page-portfolio-sable.vercel.app/",
-  },
-
 ];
 
 const ProjectsPage: React.FC = () => {
@@ -40,14 +35,7 @@ const ProjectsPage: React.FC = () => {
                   <p className="text-heading-3 mb-4">{project.description}</p>
                 </div>
                 {project.link && (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-indigo-700 hover:underline text-sm mt-auto"
-                  >
-                    View Project →
-                  </a>
+                  <Link to={project.link} className="text-indigo-700 hover:underline text-sm mt-auto"> View Project → </Link>
                 )}
               </div>
             </div>
