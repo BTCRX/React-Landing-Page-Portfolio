@@ -8,9 +8,9 @@ const project = {
   description:
     "A modern portfolio website built for showcasing design and development skills. Features interactive animations, responsive layouts, and dynamic project sections.",
   screenshots: [
-    "/src/assets/icon.png",
-    "/src/assets/icon.png",
-    "/src/assets/icon.png",
+    "./icon.png",
+    "./icon.png",
+    "./icon.png",
   ],
   technologies: ["React", "TypeScript", "Tailwind CSS", "GSAP", "Vite"],
   github: "https://github.com/yourname/nextgen-portfolio",
