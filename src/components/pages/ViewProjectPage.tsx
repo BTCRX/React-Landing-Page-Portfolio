@@ -4,7 +4,7 @@ import Carousel from "../shared/Carousel";
 const fallbackImage = "/src/assets/logo.png";
 
 const project = {
-  title: "NextGen Portfolio",
+  title: "Website Portfolio",
   description:
     "A modern portfolio website built for showcasing design and development skills. Features interactive animations, responsive layouts, and dynamic project sections.",
   screenshots: [
@@ -13,9 +13,9 @@ const project = {
     "./icon.png",
   ],
   technologies: ["React", "TypeScript", "Tailwind CSS", "GSAP", "Vite"],
-  github: "https://github.com/yourname/nextgen-portfolio",
-  liveDemo: "https://yourportfolio.vercel.app",
-  dateRange: "Jan 2024 – Feb 2024",
+  github: "#",
+  liveDemo: "https://react-landing-page-portfolio-sable.vercel.app/",
+  dateRange: "Mar 2025 – Mei 2025",
 };
 
 const ViewProjectPage: React.FC = () => {
@@ -50,7 +50,7 @@ const ViewProjectPage: React.FC = () => {
               <a
                 href={project.github}
                 className="text-link-1 underline"
-                target="_blank"
+                target="#"
                 rel="noopener noreferrer"
               >
                 View Code
@@ -63,7 +63,7 @@ const ViewProjectPage: React.FC = () => {
               <a
                 href={project.liveDemo}
                 className="text-link-1 underline"
-                target="_blank"
+                target="#"
                 rel="noopener noreferrer"
               >
                 Visit Site
@@ -79,10 +79,12 @@ const ViewProjectPage: React.FC = () => {
       <section>
         <h2 className="text-2xl text-heading-2 font-semibold mb-4">Key Features</h2>
         <ul className="list-disc text-heading-3 list-inside space-y-2">
-          <li>Responsive mobile-first design</li>
+          <li>Responsive design</li>
           <li>Scroll-triggered animations with GSAP</li>
           <li>Dark/light theme support</li>
           <li>Deployed on Vercel for CI/CD</li>
+          <li>Front end using React TypeScript</li>
+          <li>Back end using Fast API and MongoDB integration</li>
         </ul>
       </section>
     </div>

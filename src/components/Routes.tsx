@@ -8,9 +8,10 @@ import { CTA } from "./sections/CallToAction";
 import ProjectsPage from "./pages/ProjectsPage";
 import ContactPage from "./pages/ContactPage";
 import ViewProjectPage from "./pages/ViewProjectPage";
-import AdminPage from "./pages/AdminPage"; // Ganti dengan file admin panel kamu
+import { LoginPage } from "./pages/AuthAdminPage";
 import { Footer } from "./elements/Footer";
 import NotFoundPage from "./pages/PageNotFound";
+import AdminPanel from "./pages/AdminPanelPage";
 
 export const AppRoutes = () => (
     
@@ -55,7 +56,16 @@ export const AppRoutes = () => (
       path="/admin-91d3f7x"
       element={
         <Layout title="Admin Login">
-          <AdminPage />
+          <LoginPage />
+        </Layout>
+      }
+    />
+    
+    <Route
+      path="/admin-panel"
+      element={
+        <Layout title="Admin Panel">
+          <AdminPanel />
         </Layout>
       }
     />

@@ -8,16 +8,9 @@ import logo3 from '../../assets/icon_3.png';
 export const Hero = () => {
     return (
         <section className="relative pt-32 lg:pt-36">
-            
             <Container className="flex flex-col lg:flex-row gap-10 lg:gap-12">
                 <div className="absolute w-full lg:w-1/2 inset-y-0 lg:right-0">
                 </div>
-                {/* Floating Icon di atas konten
-                <img
-                    src={logo}
-                    alt="Floating Icon"
-                    className="absolute flex flex-col items-center w-24 h-24 opacity-100 z-100 pointer-events-none icon-float left-1/5 top-40"
-                /> */}
                 <div className="title-animation relative flex flex-col items-center text-center lg:text-lef lg:py-8 lg:items-start lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2">
                     <h1 className="text-heading-1 text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold">
                         Bringing Ideas to Life Through

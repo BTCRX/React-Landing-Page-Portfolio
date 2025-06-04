@@ -1,18 +1,32 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
-export default function AdminPage() {
+export const LoginPage: React.FC = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState(false);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (success) {
+      const timer = setTimeout(() => {
+        navigate("/admin-panel");
+      }, 1500); // delay 1.5 detik sebelum redirect
+
+      return () => clearTimeout(timer); // cleanup timer saat unmount
+    }
+  }, [success, navigate]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Contoh validasi sederhana, ganti sesuai backend / auth logic kamu
+    setError("");
+
     if (username === "admin" && password === "123456") {
-      alert("Login berhasil!");
-      // redirect atau logic lain di sini
+      setSuccess(true);
     } else {
-      setError("Username atau password salah");
+      setError("❌ Wrong username or password.");
     }
   };
 
